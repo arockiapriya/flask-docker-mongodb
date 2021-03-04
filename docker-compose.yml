@@ -1,0 +1,12 @@
+version: '2'
+services:
+  app_be:
+    build: .
+    environment:
+      WORKER_SMTP_PORT: 265
+      MONGO_URI: ${MONGO_URI}
+    ports:
+     - "6002:6002"
+    volumes:
+     - .:/home/app/api_sample    
+
